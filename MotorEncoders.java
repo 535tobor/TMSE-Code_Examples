@@ -39,6 +39,24 @@ public class FieldCentric extends LinearOpMode {
 
         waitForStart();
         // Encoders only work if they are plugged in! Make sure that your robot's encoders are plugged into your robot.
+        frontRightMotor.setTargetPosition(200);
+        frontRightMotor.setPower(1);
+
+        frontLeftMotor.setTargetPosition(200);
+        frontLeftMotor.setPower(1);
+
+        backRightMotor.setTargetPosition(200);
+        backRightMotor.setPower(1);
+
+        backLeftMotor.setTargetPosition(200);
+        backLeftMotor.setPower(1);
+
+
+        frontLeftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        frontRightMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        backLeftMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        backRightMotor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+        
         if (isStopRequested()) return;
     }
 }
